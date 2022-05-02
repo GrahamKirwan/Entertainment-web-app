@@ -19,6 +19,7 @@ export default function Sidebar() {
                 <li><MoviesIcon/></li>
                 <li><TvSeriesIcon/></li>
                 <li><BookmarkIcon/></li>
+                
             </NavStyled>
         </SidebarNavContainerStyled>
         

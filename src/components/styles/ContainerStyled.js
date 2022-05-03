@@ -18,3 +18,12 @@ export const ContainerStyled = styled.div`
         margin: 0;
     }
 `
+
+export const MainStyled = styled.main`
+    margin-left: 8.9rem;
+
+    @media screen and (max-width: 950px) {
+        margin-left: 0;
+        padding-top: 7.5rem;
+  }
+`

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const SidebarStyled = styled.div`
-  height: 100%;
-  width: 7rem;
+  height: calc(100vh - 5rem);
+  width: 6.4rem;
   background-color: #171e31;
   border-radius: 25px;
-  position: relative;
+  position: fixed;
 
   display: flex;
   align-items: center;
@@ -13,7 +13,7 @@ export const SidebarStyled = styled.div`
   justify-content: space-between;
 
   @media screen and (max-width: 950px) {
-    width: 100%;
+    width: calc(100% - 3rem);
     height: 6rem;
     flex-direction: row;
   }
@@ -21,6 +21,7 @@ export const SidebarStyled = styled.div`
   @media screen and (max-width: 615px) {
         border-radius: 0;
         height: 5rem;
+        width: 100%;
     }
 `;
 
@@ -111,6 +112,10 @@ export const UserStyled = styled.div`
     @media screen and (max-width: 950px) {
       margin-bottom: 0;
       margin-right: 2rem;
+    }
+
+    @media screen and (max-width: 615px) {
+        width: 2rem;
     }
   }
 `;

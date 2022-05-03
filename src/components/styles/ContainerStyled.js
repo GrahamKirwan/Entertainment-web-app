@@ -9,8 +9,12 @@ export const ContainerStyled = styled.div`
     grid-gap: 2.5rem;
 
 
-    /* @media screen and (max-width: 750px) {
-        grid-template-columns: 1fr;
-        margin-top: 30px
-    } */
+    @media screen and (max-width: 950px) {
+        display: block;
+        margin: 1.5rem;
+    }
+
+    @media screen and (max-width: 615px) {
+        margin: 0;
+    }
 `

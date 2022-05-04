@@ -21,9 +21,15 @@ export const ContainerStyled = styled.div`
 
 export const MainStyled = styled.main`
     margin-left: 8.9rem;
+    width: calc(100vw - 5rem - 8.9rem);
 
     @media screen and (max-width: 950px) {
         margin-left: 0;
         padding-top: 7.5rem;
-  }
+        width: inherit;
+    }
+
+    @media screen and (max-width: 615px) {
+        padding-top: 5.5rem;
+    }
 `

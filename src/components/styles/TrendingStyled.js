@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-import MoviePic from '../../images/thumbnails/beyond-earth/trending/large.jpg';
 
 
 export const TrendingStyled = styled.div`
@@ -21,6 +20,7 @@ export const TrendingCardContainer = styled.div`
     flex-wrap: nowrap;
     overflow-x: auto;
     cursor: grab;
+    margin-bottom: 2rem;
 
     &::-webkit-scrollbar {
         display: none;
@@ -32,7 +32,7 @@ export const TrendingCardContainer = styled.div`
 export const TrendingCardStyled = styled.div`
     flex: 0 0 auto;
     cursor: default;
-    background-image: url(${MoviePic});
+    background-image: ${props => `url(${props.movie.thumbnail.trending.large}) `};
     width: 32rem;
     height: 15rem;
     background-size: cover;

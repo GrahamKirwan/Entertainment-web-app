@@ -56,6 +56,7 @@ export default function Trending() {
             <TrendingCard moviePic={MoviePic}/>
             <TrendingCard moviePic={MoviePic}/>
             <TrendingCard moviePic={MoviePic}/>
+            <TrendingCard moviePic={MoviePic}/>
         </TrendingCardContainer>
     </TrendingStyled>
 

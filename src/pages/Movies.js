@@ -1,16 +1,18 @@
 import React from 'react'
 
-import Sidebar from '../components/Sidebar'
-import { ContainerStyled } from '../components/styles/ContainerStyled'
+import Sidebar from '../components/Sidebar';
+import SearchBar from '../components/SearchBar';
+import MoviesList from '../components/MoviesList';
+import { ContainerStyled, MainStyled } from '../components/styles/ContainerStyled';
 
 export default function Movies() {
   return (
     <ContainerStyled>
         <Sidebar />
-        <main>
-            <p>search</p>
-            <p>movies</p>
-        </main>
+        <MainStyled>
+            <SearchBar />
+            <MoviesList />
+        </MainStyled>
     </ContainerStyled>
   )
 }

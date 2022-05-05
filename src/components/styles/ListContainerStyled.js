@@ -5,6 +5,20 @@ export const ListContainerStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 2.5rem;
+
+  @media screen and (max-width: 1350px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (max-width: 950px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 615px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
 `;
 
 export const ListContainerCard = styled.div`
@@ -25,12 +39,21 @@ export const ListContainerCardBg = styled.div`
   &:hover > section {
     display: flex;
   }
+
+  @media screen and (max-width: 950px) {
+    height: 11rem;
+  }
+
+  @media screen and (max-width: 615px) {
+      height: 9rem;
+    }
 `;
 
 export const ListContainerCardInfo = styled.div`
   margin-top: 0.7rem;
   span {
     font-size: 0.9rem;
+    font-weight: 200;
   }
 
   h3 {

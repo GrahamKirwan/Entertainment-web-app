@@ -7,11 +7,14 @@ export const TrendingStyled = styled.div`
     & h1 {
         font-weight: 300;
         font-size: 2rem;
+
+        @media screen and (max-width: 615px) {
+        font-size: 1.5rem;
+    }
     }
 
     @media screen and (max-width: 615px) {
         margin-left: 2rem;
-        margin-right: 2rem;
     }
 `
 
@@ -57,6 +60,7 @@ export const TrendingCardStyled = styled.div`
     @media screen and (max-width: 615px) {
         width: 21rem;
       height: 11rem;
+      margin-right: 1.5rem;
     }
 
 `

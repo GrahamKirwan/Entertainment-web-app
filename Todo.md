@@ -6,7 +6,6 @@ Context API
 TMDB API / Data.js?
 Auth
 Firebase
-SwiperJS
 Framer Motion
 Notifications - toast? (When bookmark)
 Local Storage

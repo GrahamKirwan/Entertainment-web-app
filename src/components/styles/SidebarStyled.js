@@ -6,7 +6,7 @@ export const SidebarStyled = styled.div`
   background-color: #171e31;
   border-radius: 25px;
   position: fixed;
-
+  z-index: 1000;
   display: flex;
   align-items: center;
   flex-direction: column;

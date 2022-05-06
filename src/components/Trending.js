@@ -9,7 +9,7 @@ import MoviePic from '../images/thumbnails/beyond-earth/trending/large.jpg';
 import data from "../data/data.json";
 
 
-export default function Trending() {
+export default function Trending(props) {
 
     // Slider logic
     const sliderRef = useRef();
@@ -56,9 +56,8 @@ export default function Trending() {
     });
     
 
-
   return (
-    <TrendingStyled>
+    <TrendingStyled style={props.isSearching ? {display: 'none'} : {display: 'initial'}}>
         <h1>Trending</h1>
         <TrendingCardContainer ref={sliderRef} onMouseDown={sliderMouseDown} onMouseLeave={sliderMouseLeave} onMouseUp={sliderMouseUp} onMouseMove={sliderMouseMove}>
             {trendingMovies.map((movie, key) => (<TrendingCard key={key} movie={movie} moviePic={MoviePic}/>))}

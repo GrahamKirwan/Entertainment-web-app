@@ -26,7 +26,6 @@ export default function Recommended(props) {
        }
    })
 
-   console.log(props.searchTerm)
 
   return (
     <RecommendedStyled>

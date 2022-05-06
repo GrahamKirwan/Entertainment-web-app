@@ -103,11 +103,15 @@ export const UserStyled = styled.div`
     right: 2rem;
   }
 
-  img {
-    border-radius: 50%;
+  svg {
+    /* border-radius: 50%;
     width: 3rem;
-    border: 1px solid white;
+    border: 1px solid white; */
     margin-bottom: 3rem;
+
+    &:hover > path{
+      fill: #fd4746;
+    }
 
     @media screen and (max-width: 950px) {
       margin-bottom: 0;
@@ -115,7 +119,7 @@ export const UserStyled = styled.div`
     }
 
     @media screen and (max-width: 615px) {
-        width: 2rem;
+        /* width: 2rem; */
     }
   }
 `;

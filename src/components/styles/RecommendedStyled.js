@@ -15,4 +15,5 @@ export const RecommendedStyled = styled.div`
         margin-left: 2rem;
         margin-right: 2rem;
     }
+
 `

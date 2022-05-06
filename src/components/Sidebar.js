@@ -10,6 +10,7 @@ import { ReactComponent as HomeIcon } from '../images/assets/icon-nav-home.svg'
 import { ReactComponent as MoviesIcon } from '../images/assets/icon-nav-movies.svg'
 import { ReactComponent as TvSeriesIcon } from '../images/assets/icon-nav-tv-series.svg'
 import { ReactComponent as BookmarkIcon } from '../images/assets/icon-nav-bookmark.svg'
+import { ReactComponent as LoginIcon } from '../images/assets/icon-login.svg'
 import UserPic from '../images/assets/image-avatar.png';
 
 import styles from '../components/styles/active.module.scss'
@@ -32,7 +33,7 @@ export default function Sidebar() {
             </NavStyled>
         </SidevarTopCont>
         <UserStyled>
-            <img src={UserPic}></img>
+            <Link to="/login"><LoginIcon/></Link>
         </UserStyled>
     </SidebarStyled>
   )

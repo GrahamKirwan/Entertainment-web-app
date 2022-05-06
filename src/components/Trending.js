@@ -57,7 +57,7 @@ export default function Trending(props) {
     
 
   return (
-    <TrendingStyled style={props.isSearching ? {display: 'none'} : {display: 'initial'}}>
+    <TrendingStyled style={props.isSearching ? {display: 'none'} : {display: 'inherit'}}>
         <h1>Trending</h1>
         <TrendingCardContainer ref={sliderRef} onMouseDown={sliderMouseDown} onMouseLeave={sliderMouseLeave} onMouseUp={sliderMouseUp} onMouseMove={sliderMouseMove}>
             {trendingMovies.map((movie, key) => (<TrendingCard key={key} movie={movie} moviePic={MoviePic}/>))}

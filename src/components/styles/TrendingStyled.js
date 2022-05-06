@@ -47,6 +47,9 @@ export const TrendingCardStyled = styled.div`
     overflow: hidden;
     transition: all .3s;
 
+    animation-name: fade-in;
+    animation-duration: 2s;
+
 
     &:hover > section{
         display: flex;
@@ -61,6 +64,11 @@ export const TrendingCardStyled = styled.div`
         width: 21rem;
       height: 11rem;
       margin-right: 1.5rem;
+    }
+
+    @keyframes fade-in {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
 `

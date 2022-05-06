@@ -5,6 +5,7 @@ export const ListContainerStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 2.5rem;
+  margin-bottom: 2.5rem;
 
   @media screen and (max-width: 1350px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -27,7 +28,7 @@ export const ListContainerCard = styled.div`
 
 export const ListContainerCardBg = styled.div`
   height: 12rem;
-  background-color: green;
+  background-color: #171e31;
   background-image: ${(props) =>
     `url(${props.movie.thumbnail.regular.large}) `};
   background-size: cover;
@@ -35,6 +36,9 @@ export const ListContainerCardBg = styled.div`
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+
+  animation-name: fade-in;
+  animation-duration: 2s;
 
   &:hover > section {
     display: flex;
@@ -47,10 +51,18 @@ export const ListContainerCardBg = styled.div`
   @media screen and (max-width: 615px) {
       height: 9rem;
     }
+
+    @keyframes fade-in {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
 `;
 
 export const ListContainerCardInfo = styled.div`
   margin-top: 0.7rem;
+  animation-name: fade-in;
+  animation-duration: 1s;
+
   span {
     font-size: 0.9rem;
     font-weight: 200;
@@ -60,6 +72,11 @@ export const ListContainerCardInfo = styled.div`
     margin: 0;
     font-weight: 500;
   }
+
+  @keyframes fade-in {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
 `;
 
 export const RecommendedCardOverlay = styled.section`

@@ -5,6 +5,7 @@ import Homepage from '../src/pages/Homepage';
 import Movies from '../src/pages/Movies';
 import TvSeries from '../src/pages/TvSeries';
 import Bookmarks from '../src/pages/Bookmarks';
+import Login from '../src/pages/Login';
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
           </Route>
           <Route path="/bookmarks">
             <Bookmarks></Bookmarks>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
           </Route>
         </Switch>
     </div>

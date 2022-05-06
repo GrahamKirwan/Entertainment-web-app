@@ -6,7 +6,6 @@ import {RecommendedStyled} from '../components/styles/RecommendedStyled'
 
 import data from "../data/data.json";
 
-
 export default function Recommended(props) {
 
    // Create array without trending movies
@@ -17,6 +16,7 @@ export default function Recommended(props) {
        }
    })
 
+   
   // Create array of search results
    let searchResults = [];
    data.map((item) => {

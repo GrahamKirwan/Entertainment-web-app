@@ -30,7 +30,6 @@ export const LoginContainerStyled = styled.div`
             border-bottom: 1px solid rgb(90, 105, 143);
             height: 37px;
             font-size: 15px;
-            margin-bottom: 1.5rem;
             padding: 0px 1rem;
             outline: none;
             caret-color: rgb(252, 71, 71);

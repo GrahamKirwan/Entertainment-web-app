@@ -1,5 +1,8 @@
 import './App.css';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { Route, Switch } from "react-router-dom";
 import Homepage from '../src/pages/Homepage';
 import Movies from '../src/pages/Movies';
@@ -11,6 +14,17 @@ import Login from '../src/pages/Login';
 function App() {
   return (
     <div className="App">
+                  <ToastContainer
+              position="top-center"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              /> 
         <Switch>
           <Route path="/" exact>
             <Homepage></Homepage>

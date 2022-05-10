@@ -1,11 +1,14 @@
 import React from 'react'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useContext } from 'react';
 
 import { BookmarkContext } from './store/bookmark-context';
+import { AuthContext } from './store/auth-context';
 
 import {
-    ListContainerStyled,
     ListContainerCardStyled,
     ListContainerCardBg,
     ListContainerCardInfo,
@@ -22,16 +25,23 @@ import {
 export default function ListContainerCard(props) {
 
     const ctx = useContext(BookmarkContext);
+    const ctxAuth = useContext(AuthContext);
 
     let title = props.item.title;
     let bookmarked = props.item.isBookmarked;
 
     function bookmarkClickHandler() {
-        if(bookmarked) {
-            ctx.removeBookmark(title);
-        }
-        else {
-            ctx.addBookmark(title);
+        if(ctxAuth.isLoggedIn) {
+            if(bookmarked) {
+                ctx.removeBookmark(title);
+                toast.success("Bookmark removed!");
+            }
+            else {
+                ctx.addBookmark(title);
+                toast.success("Bookmark added!");
+            }
+        } else {
+          toast.error("Please login!");
         }
     }
 

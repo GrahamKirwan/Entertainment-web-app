@@ -1,5 +1,8 @@
 import React from 'react'
 import { useRef, useEffect } from 'react';
+import { BookmarkContext } from './store/bookmark-context';
+
+import { useContext } from 'react';
 
 import TrendingCard from './TrendingCard';
 import {TrendingStyled, TrendingCardContainer} from '../components/styles/TrendingStyled';
@@ -10,6 +13,8 @@ import data from "../data/data.json";
 
 
 export default function Trending(props) {
+
+    const ctx = useContext(BookmarkContext);
 
     // Slider logic
     const sliderRef = useRef();
@@ -49,7 +54,7 @@ export default function Trending(props) {
 
     // Create trending movies array
     let trendingMovies = [];
-    data.map((movie) => {
+    ctx.data.map((movie) => {
         if(movie.isTrending){
             trendingMovies.push(movie);
         }

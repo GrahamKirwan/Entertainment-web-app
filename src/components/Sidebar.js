@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { useContext, useState } from 'react';
 import { AuthContext } from '../components/store/auth-context';
 
@@ -30,6 +33,7 @@ export default function Sidebar() {
 
     function logoutBoxHandler() {
         ctx.logout();
+        toast.success('Logged out!')
         setShowLogout(false);
     }
     

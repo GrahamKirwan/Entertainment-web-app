@@ -2,6 +2,9 @@ import React from 'react'
 import { useState, useRef, useContext } from 'react'
 import { useHistory } from 'react-router-dom';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import {LoginContainerStyled, FormContainer} from '../components/styles/LoginContainerStyled'
 
@@ -63,10 +66,11 @@ export default function Login() {
         }
         }).then((data) => {
             ctx.login(data.idToken);
-            console.log(data)
+            toast.success('Logged in!')
             history.replace('/')
         }).catch((err) => {
             console.log(err)
+            toast.error('Login failed, please try again!')
         })
     }
 
@@ -78,8 +82,8 @@ export default function Login() {
         <FormContainer>
             {loginOrSignup == 'login' ? (<h1>Login</h1>) : (<h1>Sign Up</h1>)}
             <form onSubmit={submitHandler}>
-                <input type="text" ref={emailRef} placeholder='Email Address'></input>
-                <input type="password" ref={passwordRef} placeholder='Password'></input>
+                <input required type="email" ref={emailRef} placeholder='Email Address'></input>
+                <input required type="password" ref={passwordRef} placeholder='Password'></input>
                 <button type='submit'>{loginOrSignup == 'login' ? ('Log in to your account') : ('Create an Account')}</button>
                 <div>{loginOrSignup == 'login' ? (<span>Don't have an account?</span>) : (<span>Already have an account?</span>)} {loginOrSignup == 'login' ? (<a onClick={setLoginOrSignupHandler}>Sign up</a>) : (<a onClick={setLoginOrSignupHandler}>Login</a>)}</div>
             </form>

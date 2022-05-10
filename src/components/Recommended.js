@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from "react";
+import { BookmarkContext } from "./store/bookmark-context";
 
 import ListContainer from './ListContainer';
 
@@ -8,18 +10,20 @@ import data from "../data/data.json";
 
 export default function Recommended(props) {
 
+  const ctx = useContext(BookmarkContext);
+
+
    // Create array without trending movies
    let recommended = [];
-   data.map((item) => {
+   ctx.data.map((item) => {
        if(!item.isTrending) {
            recommended.push(item);
        }
    })
 
-   
   // Create array of search results
    let searchResults = [];
-   data.map((item) => {
+   ctx.data.map((item) => {
       let title = item.title.toLowerCase();
        if(title.includes(props.searchTerm)) {
         searchResults.push(item);

@@ -122,7 +122,7 @@ export const RecommendedCardBookmark = styled.div`
   z-index: 10;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .2);
   }
 
   & svg path {
@@ -130,7 +130,7 @@ export const RecommendedCardBookmark = styled.div`
   }
 
   &:hover > svg path {
-    stroke: rgba(115, 115, 115, 1);
+    /* stroke: rgba(115, 115, 115, 1); */
   }
 
   & svg {

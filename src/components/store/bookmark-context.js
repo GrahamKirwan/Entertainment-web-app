@@ -1,12 +1,29 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 import jsonData from "../../data/data.json";
 
 export const BookmarkContext = createContext();
 
 export function BookmarkContextProvider(props) {
 
-   
     const [data, setData] = useState(jsonData);
+    
+    let newJsonData = [];
+
+    useEffect(() => {
+        let initialBookmarks = localStorage.getItem('bookmarks');
+        
+        if(initialBookmarks) {
+            newJsonData = JSON.parse(initialBookmarks)
+            console.log(data)
+            setData(newJsonData)
+            console.log(data)
+        }
+
+    }, [])
+
+
+    
+
 
 
     function addBookmarkHandler(title) {
@@ -18,6 +35,8 @@ export function BookmarkContextProvider(props) {
             updatedData.push(item);
         })
         setData(updatedData);
+        localStorage.setItem('bookmarks', JSON.stringify(data));
+
     }
 
     function removeBookmarkHandler(title) {
@@ -29,6 +48,7 @@ export function BookmarkContextProvider(props) {
             updatedData.push(item);
         })
         setData(updatedData);
+        localStorage.setItem('bookmarks', JSON.stringify(data));
     }
     
 

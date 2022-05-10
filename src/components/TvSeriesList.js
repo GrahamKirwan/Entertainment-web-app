@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { BookmarkContext } from "./store/bookmark-context";
 
 import ListContainer from "./ListContainer";
 
@@ -7,9 +9,12 @@ import { RecommendedStyled } from "../components/styles/RecommendedStyled";
 import data from "../data/data.json";
 
 export default function TvSeriesList(props) {
+
+  const ctx = useContext(BookmarkContext);
+
   // Create array without trending movies
   let recommended = [];
-  data.map((item) => {
+  ctx.data.map((item) => {
     if (item.category == "TV Series") {
       recommended.push(item);
     }

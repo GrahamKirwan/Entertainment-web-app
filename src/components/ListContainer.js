@@ -15,7 +15,6 @@ export default function ListContainer(props) {
       {props.data.map((item, key) => {
         return (
           <ListContainerCard item={item} key={key}></ListContainerCard>
-          
         );
       })}
     </ListContainerStyled>

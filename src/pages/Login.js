@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState, useRef, useContext } from 'react'
 import { useHistory } from 'react-router-dom';
 
 
@@ -7,8 +7,13 @@ import {LoginContainerStyled, FormContainer} from '../components/styles/LoginCon
 
 import { ReactComponent as Logo } from '../images/assets/logo.svg'
 
+import { AuthContext } from '../components/store/auth-context';
+
+
 
 export default function Login() {
+
+    const ctx = useContext(AuthContext)
 
     const [loginOrSignup, setLoginOrSignup] = useState('login');
 
@@ -57,8 +62,8 @@ export default function Login() {
             })
         }
         }).then((data) => {
-            // ctx.login(data.idToken);
-            console.log("returned data" + data)
+            ctx.login(data.idToken);
+            console.log(data)
             history.replace('/')
         }).catch((err) => {
             console.log(err)

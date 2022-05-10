@@ -122,4 +122,47 @@ export const UserStyled = styled.div`
         /* width: 2rem; */
     }
   }
+
+  img {
+    border-radius: 50%;
+    width: 3rem;
+    border: 1px solid white;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 950px) {
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+
+    @media screen and (max-width: 615px) {
+        width: 2rem;
+    }
+  }
 `;
+
+
+export const Logoutbox = styled.div`
+  background-color: #5A6A8F;
+  width: 6.4rem;
+  height: 2rem;
+  display: flex;
+  position: absolute;
+  left: 0;
+  border-radius: 5px;
+  transform: translateY(-3rem);
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 950px) {
+    transform: translateY(3.5rem);
+    left: auto;
+    margin-right: .3rem;
+    right: 0
+    }
+
+    @media screen and (max-width: 615px) {
+      width: 4.5rem;
+      margin-right: .8rem;
+    }
+  
+`

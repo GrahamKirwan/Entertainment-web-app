@@ -1,9 +1,12 @@
 import React from 'react'
 
+import { useContext, useState } from 'react';
+import { AuthContext } from '../components/store/auth-context';
+
 import { useLocation } from 'react-router-dom'
 import { Link } from "react-router-dom";
 
-import { SidebarStyled, SidebarNavContainerStyled, NavStyled, UserStyled, LogoCont, SidevarTopCont } from './styles/SidebarStyled'
+import { SidebarStyled, SidebarNavContainerStyled, NavStyled, UserStyled, LogoCont, SidevarTopCont, Logoutbox } from './styles/SidebarStyled'
 
 import { ReactComponent as Logo } from '../images/assets/logo.svg'
 import { ReactComponent as HomeIcon } from '../images/assets/icon-nav-home.svg'
@@ -18,8 +21,21 @@ import styles from '../components/styles/active.module.scss'
 
 export default function Sidebar() {
 
+    const [showLogout, setShowLogout] = useState(false);
+
+    const ctx = useContext(AuthContext);
+
     let location = useLocation();
     location = location.pathname.substring(1);
+
+    function logoutBoxHandler() {
+        ctx.logout();
+        setShowLogout(false);
+    }
+    
+    function userImageClicked() {
+        setShowLogout(!showLogout);
+    }
     
   return (
     <SidebarStyled>
@@ -33,7 +49,11 @@ export default function Sidebar() {
             </NavStyled>
         </SidevarTopCont>
         <UserStyled>
-            <Link to="/login"><LoginIcon/></Link>
+            {showLogout && (<Logoutbox onClick={logoutBoxHandler}>
+                <p>Logout</p>
+            </Logoutbox>)}
+            {ctx.isLoggedIn && (<div onClick={userImageClicked}><img src={UserPic}/></div>)}
+            {!ctx.isLoggedIn && (<Link to="/login"><LoginIcon/></Link>)}
         </UserStyled>
     </SidebarStyled>
   )

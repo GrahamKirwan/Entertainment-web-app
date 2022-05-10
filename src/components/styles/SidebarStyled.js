@@ -82,6 +82,11 @@ export const NavStyled = styled.ul`
       padding-top: 0;
       padding-right: 2.5rem;
     }
+
+    @media screen and (max-width: 615px) {
+      padding-top: 0;
+      padding-right: 1.5rem;
+    }
   }
 
   & li:last-child {

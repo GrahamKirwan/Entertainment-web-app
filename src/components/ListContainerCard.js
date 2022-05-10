@@ -34,11 +34,11 @@ export default function ListContainerCard(props) {
         if(ctxAuth.isLoggedIn) {
             if(bookmarked) {
                 ctx.removeBookmark(title);
-                toast.success("Bookmark removed!");
+                toast.success(title + " removed from bookmarks!");
             }
             else {
                 ctx.addBookmark(title);
-                toast.success("Bookmark added!");
+                toast.success(title + " added to bookmarks!");
             }
         } else {
           toast.error("Please login!");

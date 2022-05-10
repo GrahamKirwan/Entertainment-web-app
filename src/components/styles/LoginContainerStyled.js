@@ -81,4 +81,8 @@ export const FormContainer = styled.div`
             margin: 0;
             margin-bottom: 2rem;
         }
+
+        @media screen and (max-width: 615px) {
+            width: initial;
+        }
 `

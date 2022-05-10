@@ -22,7 +22,7 @@ export const ListContainerStyled = styled.div`
     }
 `;
 
-export const ListContainerCard = styled.div`
+export const ListContainerCardStyled = styled.div`
   overflow: hidden;
 `;
 

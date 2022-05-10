@@ -12,3 +12,6 @@ Local Storage
 Form Vaildation?
 
 Logic - Must be logged in to bookmark or view bookmarks page. When logged in, bookmarks are saved in local storage. 
+
+Toast notifications
+Bookmark logic

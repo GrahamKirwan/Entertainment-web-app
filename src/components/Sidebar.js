@@ -45,7 +45,8 @@ export default function Sidebar() {
                 <li><Link to="/"><HomeIcon className={location == '' ? styles.active : ''}/></Link></li>
                 <li><Link to="/movies"><MoviesIcon className={location == 'movies' ? styles.active : ''}/></Link></li>
                 <li><Link to="/tv-series"><TvSeriesIcon className={location == 'tv-series' ? styles.active : ''}/></Link></li>
-                <li><Link to="/bookmarks"><BookmarkIcon className={location == 'bookmarks' ? styles.active : ''}/></Link></li>
+                {ctx.isLoggedIn && (<li><Link to="/bookmarks"><BookmarkIcon className={location == 'bookmarks' ? styles.active : ''}/></Link></li>)}
+                
             </NavStyled>
         </SidevarTopCont>
         <UserStyled>

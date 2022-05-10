@@ -1,8 +1,5 @@
 import React from 'react'
 
-import { useContext } from 'react';
-import { BookmarkContext } from './store/bookmark-context';
-
 import ListContainer from './ListContainer';
 
 import {RecommendedStyled} from '../components/styles/RecommendedStyled'
@@ -10,13 +7,11 @@ import {RecommendedStyled} from '../components/styles/RecommendedStyled'
 import data from "../data/data.json";
 
 
-export default function MoviesList(props) {
-
-  const ctx = useContext(BookmarkContext);
+export default function BookmarksList(props) {
 
    // Create array without trending movies
    let recommended = [];
-   ctx.data.map((item) => {
+   data.map((item) => {
        if(item.category == 'Movie') {
            recommended.push(item);
        }
@@ -33,8 +28,11 @@ export default function MoviesList(props) {
 
   return (
     <RecommendedStyled>
-        {props.isSearching ? (<h1>Search Results ({searchResults.length})</h1>) : (<h1>Movies</h1>)}
+        {props.isSearching ? (<h1>Search Results ({searchResults.length})</h1>) : (<h1>Bookmarked Movies</h1>)}
         {props.searchTerm.length > 0 ? (<ListContainer data={searchResults} />) : (<ListContainer data={recommended} />)}
+
+        {!props.isSearching && (<h1>Bookmarked TV Series</h1>)}
+        {!props.isSearching && (<ListContainer data={recommended} />)}
     </RecommendedStyled>
   )
 }

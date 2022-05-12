@@ -23,7 +23,7 @@ This is a solution to the [Entertainment app challenge on Frontend Mentor](https
 
 Users should be able to:
 
-- Navigate between Home, Movies, TV Series, and Bookmarked Shows pages
+- Navigate between Home, Movies, TV Series, Login and Bookmarked Shows pages
 - Add/Remove bookmarks from all movies and TV series
 - Search for relevant shows on all pages
 - View the optimal layout for the app depending on their device's screen size

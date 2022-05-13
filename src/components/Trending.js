@@ -9,7 +9,6 @@ import {TrendingStyled, TrendingCardContainer} from '../components/styles/Trendi
 
 import MoviePic from '../images/thumbnails/beyond-earth/trending/large.jpg';
 
-import data from "../data/data.json";
 
 
 export default function Trending(props) {

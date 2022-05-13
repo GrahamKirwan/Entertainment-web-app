@@ -6,7 +6,6 @@ import ListContainer from "./ListContainer";
 
 import { RecommendedStyled } from "../components/styles/RecommendedStyled";
 
-import data from "../data/data.json";
 
 export default function TvSeriesList(props) {
 

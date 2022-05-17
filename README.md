@@ -1,6 +1,4 @@
-# Frontend Mentor - Entertainment web app solution
-
-This is a solution to the [Entertainment app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/).
+# Entertainment web app solution
 
 ## Table of contents
 
@@ -18,8 +16,6 @@ This is a solution to the [Entertainment app challenge on Frontend Mentor](https
 
 
 ## Overview
-
-### The challenge
 
 Users should be able to:
 

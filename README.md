@@ -1,4 +1,4 @@
-# Frontend Mentor - Product feedback app solution
+# Frontend Mentor - Entertainment web app solution
 
 This is a solution to the [Entertainment app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/).
 

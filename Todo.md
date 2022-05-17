@@ -17,6 +17,7 @@ Not ideal to ship a react app with an API key even if it was hidden in an enviro
 
 Users can only access the bookmarks url if they are logged in with a token id from firebase.
 Users cannot click the bookmark widget unless logged in.
-Login token is stored in local storage if a user leaves the page and revisits
+Login token is stored in local storage if a user leaves the page and revisits.
 Users bookmarks are stored in local storage. This could also have been integreated into a database for the user but for this usecase that would be overkill.
 Users get notified for succesful and failed login attempts.
+Fully responsive.
